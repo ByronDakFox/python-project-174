@@ -1,5 +1,6 @@
 import argparse
 import json
+from gendiff import generate_diff
 
 
 def parse_file(filepath):
@@ -29,6 +30,9 @@ def main():
     # Solo para comprobar que funciona
     print("Archivo 1 cargado:", data1)
     print("Archivo 2 cargado:", data2)
+
+    diff = generate_diff(args.first_file, args.second_file)
+    print(diff)
 
 
 if __name__ == "__main__":
