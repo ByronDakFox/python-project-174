@@ -1,9 +1,12 @@
 from pathlib import Path
 
-FIXTURE_PATH = Path(__file__).parent / "fixture"
+
+FIXTURES_PATH = Path(__file__).parent / "fixtures"
+
 
 def get_fixture_path(filename):
-    return FIXTURE_PATH / filename
+    return FIXTURES_PATH / filename
+
 
 def read_file(filename):
-    return Path(FIXTURE_PATH / filename).read_text().strip()
+    return (FIXTURES_PATH / filename).read_text().strip()

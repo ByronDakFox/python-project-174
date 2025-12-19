@@ -9,12 +9,9 @@ def main():
     parser.add_argument("first_file")
     parser.add_argument("second_file")
     parser.add_argument(
-    '-f', '--format',
-    default='stylish',
-    help='set format of output'
+        "-f", "--format",
+        help="set format of output"
     )
-
-
 
     args = parser.parse_args()
 
@@ -25,7 +22,3 @@ def main():
     )
 
     print(result)
-
-
-if __name__ == "__main__":
-    main()
