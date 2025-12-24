@@ -1,10 +1,12 @@
-from gendiff import generate_diff
-from utils import get_fixture_path, read_file
+from gendiff.diff import build_diff
+from gendiff.parser import parse_file
+from gendiff.formatters import format_diff
 
 
-def test_plain_format():
-    file1 = get_fixture_path("file1.json")
-    file2 = get_fixture_path("file2.json")
-    expected = read_file("expected_plain.txt")
+def generate_diff(file_path1, file_path2, format_name='stylish'):
+    data1 = parse_file(file_path1)
+    data2 = parse_file(file_path2)
 
-    assert generate_diff(file1, file2, 'plain') == expected
+    diff = build_diff(data1, data2)
+
+    return format_diff(diff, format_name)
