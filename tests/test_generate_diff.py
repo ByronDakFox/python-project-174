@@ -1,5 +1,7 @@
+import json
 from gendiff import generate_diff
 from utils import get_fixture_path, read_file
+
 
 
 def test_nested_json():
@@ -16,3 +18,17 @@ def test_nested_yaml():
     expected = read_file("expected_stylish.txt")
 
     assert generate_diff(file1, file2) == expected
+
+def test_json_format():
+    result = generate_diff(
+        'tests/fixtures/file1.json',
+        'tests/fixtures/file2.json',
+        'json'
+    )
+
+    parsed = json.loads(result)
+
+    assert isinstance(parsed, list)
+    assert parsed[0]['key'] == 'common'
+    assert parsed[0]['type'] == 'nested'
+
