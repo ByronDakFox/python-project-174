@@ -213,33 +213,30 @@ gendiff/
 
 Ejemplo:
 
-```
 [![asciicast](https://asciinema.org/a/766012.svg)](https://asciinema.org/a/766012)
-```
+
 
 * ✅ Formato Plain
 
 Ejemplo:
 
-```
+
 [![asciicast](https://asciinema.org/a/766039.svg)](https://asciinema.org/a/766039)
-```
+
 
 * ✅ Formato JSON
 
 Ejemplo:
 
-```
 [![asciicast](https://asciinema.org/a/766060.svg)](https://asciinema.org/a/766060)
-```
+
 
 * ✅ Formato por defecto
 
 Ejemplo:
 
-```
 [![asciicast](https://asciinema.org/a/766077.svg)](https://asciinema.org/a/766077)
-```
+
 ---
 
 ## 📌 Características
