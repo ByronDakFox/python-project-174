@@ -1,7 +1,6 @@
 from gendiff.parser import parse_file
 from gendiff.diff_builder import build_diff
 from gendiff.formatters import format_diff
-from pprint import pprint
 
 
 def generate_diff(file1, file2, format_name='stylish'):
@@ -9,6 +8,5 @@ def generate_diff(file1, file2, format_name='stylish'):
     data2 = parse_file(file2)
 
     diff = build_diff(data1, data2)
-    #pprint(diff)   # DEBUG
 
     return format_diff(diff, format_name)

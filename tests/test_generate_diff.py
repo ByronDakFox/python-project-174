@@ -3,7 +3,6 @@ from gendiff import generate_diff
 from utils import get_fixture_path, read_file
 
 
-
 def test_nested_json():
     file1 = get_fixture_path("file1.json")
     file2 = get_fixture_path("file2.json")
@@ -31,4 +30,3 @@ def test_json_format():
     assert isinstance(parsed, list)
     assert parsed[0]['key'] == 'common'
     assert parsed[0]['type'] == 'nested'
-
