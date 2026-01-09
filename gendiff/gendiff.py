@@ -22,5 +22,3 @@ def main():
         args.second_file,
         args.format
     )
-
-    print(result)
