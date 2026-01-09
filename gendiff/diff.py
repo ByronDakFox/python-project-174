@@ -1,5 +1,3 @@
-# gendiff/diff.py
-
 def build_diff(data1, data2):
     keys = sorted(data1.keys() | data2.keys())
     diff = []
